@@ -38,4 +38,14 @@ public class PersonaRequest {
     public void setEdad(Long edad) {
         this.edad = edad;
     }
+
+    @Override
+    public String toString() {
+        return "PersonaRequest{" +
+                "nombre='" + nombre + '\'' +
+                ", apellidoPat='" + apellidoPat + '\'' +
+                ", apellidoMat='" + apellidoMat + '\'' +
+                ", edad=" + edad +
+                '}';
+    }
 }

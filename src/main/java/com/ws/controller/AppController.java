@@ -1,18 +1,24 @@
 package com.ws.controller;
 
-import javax.ws.rs.Consumes;
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
+import com.ws.model.data.PersonaRequest;
+import com.ws.service.IPersonaService;
+
+import javax.inject.Inject;
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 
 @Path("/v1")
 public class AppController {
 
-    @GET
+    @Inject //instansiar la interface
+    private IPersonaService personaService;
+
+    @POST
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
-    public String postPersona() {
-        return "Hello RESTEasy";
+    public Response postPersona(PersonaRequest request) {
+        System.out.println(request);
+        return Response.ok().entity(personaService.guardar(request)).build();
     }
 }
