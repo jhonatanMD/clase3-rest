@@ -1,5 +1,14 @@
 package com.ws.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class PersonaEntity {
 
     private String nombre;
@@ -11,64 +20,4 @@ public class PersonaEntity {
 
     private PaisEntity pais;
 
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getApellidoPat() {
-        return apellidoPat;
-    }
-
-    public void setApellidoPat(String apellidoPat) {
-        this.apellidoPat = apellidoPat;
-    }
-
-    public String getApellidoMat() {
-        return apellidoMat;
-    }
-
-    public void setApellidoMat(String apellidoMat) {
-        this.apellidoMat = apellidoMat;
-    }
-
-    public Long getEdad() {
-        return edad;
-    }
-
-    public void setEdad(Long edad) {
-        this.edad = edad;
-    }
-
-
-    public UniversidadEntity getUniversidad() {
-        return universidad;
-    }
-
-    public void setUniversidad(UniversidadEntity universidad) {
-        this.universidad = universidad;
-    }
-
-    public PersonaEntity(String nombre, String apellidoPat, String apellidoMat, Long edad, UniversidadEntity universidad, PaisEntity pais) {
-        this.nombre = nombre;
-        this.apellidoPat = apellidoPat;
-        this.apellidoMat = apellidoMat;
-        this.edad = edad;
-        this.universidad = universidad;
-        this.pais = pais;
-    }
-
-    public PersonaEntity() {
-    }
-
-    public PaisEntity getPais() {
-        return pais;
-    }
-
-    public void setPais(PaisEntity pais) {
-        this.pais = pais;
-    }
 }
