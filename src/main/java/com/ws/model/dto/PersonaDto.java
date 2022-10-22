@@ -4,8 +4,15 @@ public class PersonaDto {
 
     private String nombre;
     private String apellidoPat;
+
+    private String universidad;
+
     private String apellidoMat;
     private Long edad;
+
+    private Boolean mayorEdad;
+
+    private String pais;
 
     public String getNombre() {
         return nombre;
@@ -23,6 +30,7 @@ public class PersonaDto {
         this.apellidoPat = apellidoPat;
     }
 
+
     public String getApellidoMat() {
         return apellidoMat;
     }
@@ -37,5 +45,29 @@ public class PersonaDto {
 
     public void setEdad(Long edad) {
         this.edad = edad;
+    }
+
+    public String getUniversidad() {
+        return universidad;
+    }
+
+    public void setUniversidad(String universidad) {
+        this.universidad = universidad;
+    }
+
+    public Boolean getMayorEdad() {
+        return mayorEdad;
+    }
+
+    public void setMayorEdad(Boolean mayorEdad) {
+        this.mayorEdad = mayorEdad;
+    }
+
+    public String getPais() {
+        return pais;
+    }
+
+    public void setPais(String pais) {
+        this.pais = pais;
     }
 }

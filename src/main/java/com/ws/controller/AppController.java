@@ -11,7 +11,7 @@ import javax.ws.rs.core.Response;
 @Path("/v1")
 public class AppController {
 
-    @Inject //instansiar la interface
+    @Inject //instanciar la interface
     private IPersonaService personaService;
 
     @POST
@@ -20,5 +20,13 @@ public class AppController {
     public Response postPersona(PersonaRequest request) {
         System.out.println(request);
         return Response.ok().entity(personaService.guardar(request)).build();
+    }
+
+
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_JSON)
+    public Response getPersonas() {
+        return Response.ok().entity(personaService.getPersonas()).build();
     }
 }
