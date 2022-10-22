@@ -9,7 +9,7 @@ public class PersonaEntity {
 
     private UniversidadEntity universidad;
 
-    private String pais;
+    private PaisEntity pais;
 
     public String getNombre() {
         return nombre;
@@ -52,7 +52,7 @@ public class PersonaEntity {
         this.universidad = universidad;
     }
 
-    public PersonaEntity(String nombre, String apellidoPat, String apellidoMat, Long edad, UniversidadEntity universidad, String pais) {
+    public PersonaEntity(String nombre, String apellidoPat, String apellidoMat, Long edad, UniversidadEntity universidad, PaisEntity pais) {
         this.nombre = nombre;
         this.apellidoPat = apellidoPat;
         this.apellidoMat = apellidoMat;
@@ -64,11 +64,11 @@ public class PersonaEntity {
     public PersonaEntity() {
     }
 
-    public String getPais() {
+    public PaisEntity getPais() {
         return pais;
     }
 
-    public void setPais(String pais) {
+    public void setPais(PaisEntity pais) {
         this.pais = pais;
     }
 }

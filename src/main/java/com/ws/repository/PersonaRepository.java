@@ -1,6 +1,7 @@
 package com.ws.repository;
 
 import com.ws.mapper.PersonaMapper;
+import com.ws.model.PaisEntity;
 import com.ws.model.PersonaEntity;
 import com.ws.model.UniversidadEntity;
 import com.ws.model.dto.PersonaDto;
@@ -17,7 +18,7 @@ public class PersonaRepository {
     @Inject
     private PersonaMapper mapper;
 
-    List<PersonaEntity> personas = Arrays.asList(new PersonaEntity("Jhonata","Mallqui","Diaz",23L,new UniversidadEntity("UNI"),"Peru"));
+    List<PersonaEntity> personas = Arrays.asList(new PersonaEntity("Jhonata","Mallqui","Diaz",23L,new UniversidadEntity("UNI"),new PaisEntity("Peru","Lima")));
 
     public List<PersonaDto> getPersonas (){
 

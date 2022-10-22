@@ -6,7 +6,7 @@ import com.ws.model.dto.PersonaDto;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
-@Mapper(componentModel = "cdi")
+@Mapper(componentModel = "cdi" , uses = PaisMapper.class)
 public interface PersonaMapper {
     PersonaDto toDto (PersonaRequest request);
 
@@ -14,7 +14,7 @@ public interface PersonaMapper {
     @Mapping(target = "universidad" ,source = "universidad.nombre")
     //@Mapping(target = "mayorEdad" , expression = "java(entity.getEdad() > 18)")
     @Mapping(target = "mayorEdad" , expression = "java(mayorEdad(entity.getEdad()))")
-    @Mapping(target = "pais" , ignore = true)
+    //@Mapping(target = "pais" , ignore = true)
     PersonaDto toDto (PersonaEntity entity);
 
 

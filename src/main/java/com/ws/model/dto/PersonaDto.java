@@ -12,7 +12,7 @@ public class PersonaDto {
 
     private Boolean mayorEdad;
 
-    private String pais;
+    private PaisDto pais;
 
     public String getNombre() {
         return nombre;
@@ -63,11 +63,11 @@ public class PersonaDto {
         this.mayorEdad = mayorEdad;
     }
 
-    public String getPais() {
+    public PaisDto getPais() {
         return pais;
     }
 
-    public void setPais(String pais) {
+    public void setPais(PaisDto pais) {
         this.pais = pais;
     }
 }
